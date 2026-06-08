@@ -669,14 +669,6 @@
     position: relative;
     background: var(--linen);
   }
-  /* =====================================
-     REPLACE MENU IMAGES:
-     menu1.jpg = Breakfast menu image
-     menu2.jpg = Lunch menu image
-     menu3.jpg = Dinner menu image
-     menu4.jpg = Beverages menu image
-     Place files in same folder as index.html
-  ===================================== */
   .menu-img-wrap img {
     width: 100%; height: 100%;
     object-fit: cover;
@@ -898,7 +890,7 @@
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   }
   .map-placeholder {
-    height: 280px;
+    width: 100%; height: 280px;
     background: linear-gradient(135deg, var(--teak), var(--oak));
     display: flex;
     flex-direction: column;
@@ -906,7 +898,10 @@
     justify-content: center;
     gap: 0.75rem;
     color: var(--cream);
+    text-decoration: none;
+    transition: var(--transition);
   }
+  .map-placeholder:hover { opacity: 0.88; }
   .map-placeholder i { font-size: 3rem; opacity: 0.6; }
   .map-placeholder p { font-size: 0.85rem; opacity: 0.7; letter-spacing: 0.08em; }
   .map-open-btn {
@@ -1233,61 +1228,43 @@
       <div class="divider"></div>
       <p style="margin-top:1rem;color:var(--text-light);font-size:0.9rem;">Click any image to view full size</p>
     </div>
-
-    <!-- ================================================
-         ROOM PHOTO GALLERY — 15 IMAGES
-         Replace placeholder divs with:
-         <img src="1.jpg" alt="Room 1" loading="lazy">
-         Files: 1.jpg, 2.jpg, 3.jpg ... 15.jpg
-         Place all files in the same folder as index.html
-    ================================================ -->
     <div class="gallery-grid">
-      <!-- Image 1 -->
       <div class="gallery-item reveal" onclick="openLightbox('1.jpg','Room View 1')">
         <img src="1.jpg" alt="Room 1" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 1</span></div>
       </div>
-      <!-- Image 2 -->
       <div class="gallery-item reveal reveal-delay-1" onclick="openLightbox('2.jpg','Room View 2')">
         <img src="2.jpg" alt="Room 2" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 2</span></div>
       </div>
-      <!-- Image 3 -->
       <div class="gallery-item reveal reveal-delay-2" onclick="openLightbox('3.jpg','Room View 3')">
         <img src="3.jpg" alt="Room 3" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 3</span></div>
       </div>
-      <!-- Image 4 -->
       <div class="gallery-item reveal" onclick="openLightbox('4.jpg','Room View 4')">
         <img src="4.jpg" alt="Room 4" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 4</span></div>
       </div>
-      <!-- Image 5 -->
       <div class="gallery-item reveal reveal-delay-1" onclick="openLightbox('5.jpg','Room View 5')">
         <img src="5.jpg" alt="Room 5" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 5</span></div>
       </div>
-      <!-- Image 6 -->
       <div class="gallery-item reveal reveal-delay-2" onclick="openLightbox('6.jpg','Room View 6')">
         <img src="6.jpg" alt="Room 6" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 6</span></div>
       </div>
-      <!-- Image 7 -->
       <div class="gallery-item reveal" onclick="openLightbox('7.jpg','Room View 7')">
         <img src="7.jpg" alt="Room 7" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 7</span></div>
       </div>
-      <!-- Image 8 -->
       <div class="gallery-item reveal reveal-delay-1" onclick="openLightbox('8.jpg','Room View 8')">
         <img src="8.jpg" alt="Room 8" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 8</span></div>
       </div>
-      <!-- Image 9 -->
       <div class="gallery-item reveal reveal-delay-2" onclick="openLightbox('9.jpg','Room View 9')">
         <img src="9.jpg" alt="Room 9" loading="lazy">
         <div class="gallery-overlay"><span><i class="fas fa-expand"></i> &nbsp;Room 9</span></div>
       </div>
-
     </div>
   </div>
 </section>
@@ -1298,8 +1275,6 @@
   <img id="lightboxImg" src="" alt="">
 </div>
 
-
-
 <!-- ===== MENU SECTION ===== -->
 <section id="menu" class="section-pad">
   <div class="container">
@@ -1308,9 +1283,7 @@
       <h2 class="section-title">Our <em>Menu</em></h2>
       <div class="divider"></div>
     </div>
-
     <div class="menu-grid">
-      <!-- Menu 1 - Breakfast -->
       <div class="menu-card reveal">
         <div class="menu-img-wrap">
           <img src="menu1.jpg" alt="Breakfast Menu" loading="lazy">
@@ -1320,7 +1293,6 @@
           <span class="menu-tag">7 AM – 11 AM</span>
         </div>
       </div>
-      <!-- Menu 2 - Lunch -->
       <div class="menu-card reveal reveal-delay-1">
         <div class="menu-img-wrap">
           <img src="menu2.jpg" alt="Lunch Menu" loading="lazy">
@@ -1330,7 +1302,6 @@
           <span class="menu-tag">12 PM – 3 PM</span>
         </div>
       </div>
-      <!-- Menu 3 - Dinner -->
       <div class="menu-card reveal reveal-delay-2">
         <div class="menu-img-wrap">
           <img src="menu3.jpg" alt="Dinner Menu" loading="lazy">
@@ -1340,7 +1311,6 @@
           <span class="menu-tag">7 PM – 11 PM</span>
         </div>
       </div>
-      <!-- Menu 4 - Beverages -->
       <div class="menu-card reveal reveal-delay-3">
         <div class="menu-img-wrap">
           <img src="menu4.jpg" alt="Beverages Menu" loading="lazy">
@@ -1487,7 +1457,6 @@
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-phone"></i></div>
             <div>
-      <!-- PHONE NUMBERS: 9877117282 and 8090909126 -->
               <div class="contact-item-label">Phone / WhatsApp</div>
               <div class="contact-item-value">
                 <a href="tel:+919877117282" style="color:var(--linen);text-decoration:none;">+91 98771 17282</a><br>
@@ -1511,7 +1480,6 @@
           </div>
         </div>
         <div class="contact-socials">
-          <!-- WhatsApp: both numbers -->
           <a href="https://wa.me/919877117282" target="_blank" class="social-btn" title="WhatsApp 1"><i class="fab fa-whatsapp"></i></a>
           <a href="https://wa.me/918090909126" target="_blank" class="social-btn" title="WhatsApp 2"><i class="fab fa-whatsapp"></i></a>
           <a href="tel:+919877117282" class="social-btn" title="Call 1"><i class="fas fa-phone"></i></a>
@@ -1520,15 +1488,14 @@
       </div>
       <!-- MAP -->
       <div class="map-card reveal reveal-delay-2">
-        <div class="map-placeholder">
+        <a class="map-placeholder" href="https://maps.app.goo.gl/44dWeVyyz4mFEJGQ8" target="_blank">
           <i class="fas fa-map-marked-alt"></i>
           <p>Hotel Triple A Location</p>
-          <p style="font-size:0.72rem;">Tap below to open in Maps</p>
-        </div>
-        <!-- Apple Maps link — keep as is -->
-        <a class="map-open-btn" href="https://maps.apple/p/iPg~GWnxrmhoQ8" target="_blank">
+          <p style="font-size:0.72rem;">Tap to open in Google Maps</p>
+        </a>
+        <a class="map-open-btn" href="https://maps.app.goo.gl/44dWeVyyz4mFEJGQ8" target="_blank">
           <i class="fas fa-directions"></i>
-          Open in Apple Maps &nbsp;<i class="fas fa-external-link-alt" style="font-size:0.7rem;"></i>
+          Open in Google Maps &nbsp;<i class="fas fa-external-link-alt" style="font-size:0.7rem;"></i>
         </a>
       </div>
     </div>
@@ -1553,7 +1520,6 @@
 
 <!-- ===== FLOATING ACTION BUTTONS ===== -->
 <div class="floating-btns">
-  <!-- WhatsApp Floating Buttons -->
   <div class="float-row">
     <span class="float-label">WhatsApp: 98771 17282</span>
     <a class="float-btn float-whatsapp" href="https://wa.me/919877117282" target="_blank" title="WhatsApp 1">
@@ -1566,7 +1532,6 @@
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
-  <!-- Call Floating Buttons -->
   <div class="float-row">
     <span class="float-label">Call: 98771 17282</span>
     <a class="float-btn float-call" href="tel:+919877117282" title="Call 1">
@@ -1579,10 +1544,9 @@
       <i class="fas fa-phone"></i>
     </a>
   </div>
-  <!-- Apple Maps link — keep as is -->
   <div class="float-row">
     <span class="float-label">Get Directions</span>
-    <a class="float-btn float-location" href="https://maps.apple/p/iPg~GWnxrmhoQ8" target="_blank" title="Location">
+    <a class="float-btn float-location" href="https://maps.app.goo.gl/44dWeVyyz4mFEJGQ8" target="_blank" title="Location">
       <i class="fas fa-map-marker-alt"></i>
     </a>
   </div>
@@ -1612,7 +1576,6 @@
       this.vy = (Math.random() - 0.5) * 0.35;
       this.pulse = Math.random() * Math.PI * 2;
       this.pulseSpeed = 0.012 + Math.random() * 0.015;
-      // warm gold / amber tones
       const colors = ['#D4A853','#C8883A','#F5EDD8','#A0642A','#E8C87A'];
       this.color = colors[Math.floor(Math.random() * colors.length)];
     }
